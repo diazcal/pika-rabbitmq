@@ -1,10 +1,5 @@
 # pika-rabbitmq
 
-This is a colletion of pika-based consumer and producers for a major microservice migration research project where I am contributing as a Solutions Architect and had to support development with some microservice coding for a PoC.
-The consumer/producers connect to a RabbitMQ instance and need to work in parallel to send and receive messages from/to the broker.
+This is a colletion of pika-based consumer and producers for microservices or any other software component that needs to produce and consume at the same time. The consumer/producers connect to a RabbitMQ instance and work in different threads to send and receive messages from/to the broker with a heartbeat signal.
 
-### Out of the repo
-I left out the folling since is not very interesting to me:
-- Consumer handler logic --> any non blocking logic is fine to consume messages.
-- Producer event dispatcher --> following the observer pattern is enough
-- main.py
+I have successfully used this implementation PoC in microservices projects together with custom message definition: Protobuf, Cap'n Proto, JSON, you name it. 
